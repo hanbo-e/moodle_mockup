@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessibility for Exams</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #0044cc;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            color: #0044cc;
+        }
+
+        .question {
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        input[type="radio"], input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+
+        button {
+            background-color: #0044cc;
+            color: #fff;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #003399;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Accessibility for Exams</h1>
+        <p>Course Exam  - Rapid Prototype with GPT prompted by Hanbo-e</p>
+    </header>
+
+    <main>
+        <h2>Exam Instructions</h2>
+        <p>Welcome to the "Accessibility for Exams" course exam. Please answer all questions to the best of your ability. Use the "Submit" button at the bottom when you are finished.</p>
+
+        <form action="#" method="POST" aria-label="Exam Form">
+            <div class="question" id="question1">
+                <h3>Question 1: What does WCAG stand for?</h3>
+                <label>
+                    <input type="radio" name="question1" value="1" aria-labelledby="question1-option1"> Web Content Accessibility Guidelines
+                </label>
+                <label>
+                    <input type="radio" name="question1" value="2" aria-labelledby="question1-option2"> Website Compliance and Accessibility Guide
+                </label>
+                <label>
+                    <input type="radio" name="question1" value="3" aria-labelledby="question1-option3"> Web Coordination and Accessibility Group
+                </label>
+            </div>
+
+            <div class="question" id="question2">
+                <h3>Question 2: Which of these is a principle of WCAG?</h3>
+                <label>
+                    <input type="checkbox" name="question2" value="perceivable" aria-labelledby="question2-option1"> Perceivable
+                </label>
+                <label>
+                    <input type="checkbox" name="question2" value="operable" aria-labelledby="question2-option2"> Operable
+                </label>
+                <label>
+                    <input type="checkbox" name="question2" value="understandable" aria-labelledby="question2-option3"> Understandable
+                </label>
+                <label>
+                    <input type="checkbox" name="question2" value="responsive" aria-labelledby="question2-option4"> Responsive
+                </label>
+            </div>
+
+            <div class="question" id="question3">
+                <h3>Question 3: Provide one example of an accessible design feature:</h3>
+                <label for="question3-text" class="sr-only">Example of accessible design feature</label>
+                <textarea id="question3-text" name="question3" rows="4" cols="50" placeholder="Type your answer here..."></textarea>
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Accessibility for Exams. All rights reserved.</p>
+    </footer>
+</body>
+</html>
