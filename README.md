@@ -1,2 +1,2 @@
 # moodle_mockup
-![Image of an accessible exam prototype](mockup)
+![Image of an accessible exam prototype](mockup.PNG)
